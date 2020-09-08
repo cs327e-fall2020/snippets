@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS college;
-CREATE DATABASE college;
-USE college;
+DROP SCHEMA IF EXISTS college CASCADE;
+CREATE SCHEMA college;
+SET SCHEMA 'college';
 
 -- create Classes
 -- tid,instructor,dept,cno,cname,credits
