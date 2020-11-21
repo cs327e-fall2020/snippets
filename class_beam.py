@@ -20,11 +20,9 @@ class MakeTakes(beam.DoFn):
 
 class MakeClass(beam.DoFn):
   def process(self, element):
-    sid = element.get('sid', '')
     cno = element['cno']
     cname = element['cname']
     credits = int(element['credits'])
-    grade = element['grade']
 
     record = {'cno': cno, 'cname': cname, 'credits': credits}
     return [(cno, record)]
@@ -38,8 +36,8 @@ class MakeUniqueClass(beam.DoFn):
      return [class_list[0]]
            
 def run():
-    PROJECT_ID = 'cs327e-sp2020'
-    BUCKET = 'gs://beam-output-data/temp'
+    PROJECT_ID = 'my-project'
+    BUCKET = 'gs://my-bucket/temp'
 
     options = {
      'project': PROJECT_ID
