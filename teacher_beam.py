@@ -22,8 +22,8 @@ class FormatName(beam.DoFn):
     return [record]
            
 def run():
-     PROJECT_ID = 'cs327e-sp2020'
-     BUCKET = 'gs://beam-output-data/temp'
+     PROJECT_ID = 'my-project'
+     BUCKET = 'gs://my-bucket/temp'
 
      options = {
      'project': PROJECT_ID
