@@ -63,7 +63,7 @@ class FormatDOB(beam.DoFn):
            
 def run():
      PROJECT_ID = 'my-project'
-     BUCKET = 'my-bucket'
+     BUCKET = 'gs://my-bucket'
      DIR_PATH = BUCKET + '/output/' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S') + '/'
 
      options = PipelineOptions(
